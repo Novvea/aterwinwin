@@ -1,10 +1,11 @@
-import { Greeting } from './components/greeting/Greeting'
+import { DesktopNavigation } from './components/navigation/desktopnavigation/DesktopNavigation'
+import { Routes } from './routes/Routes'
 
 function App() {
   return (
-    <div className="App">
-        <Greeting name={"en viss person"}/>
-    </div>
+    <Routes>
+        <DesktopNavigation/>
+    </Routes>
   );
 }
 
