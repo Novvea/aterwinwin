@@ -1,4 +1,4 @@
-export interface loginCredentials {
+export interface i_loginCredentials {
   username: string,
   password: string
 }

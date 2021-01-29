@@ -1,15 +1,19 @@
-import { useState } from 'react'
-import { loginCredentials } from '../shared/interface/Interface'
+import { useState, useContext } from 'react'
+import { i_loginCredentials } from '../shared/interface/Interface'
 import { useHistory } from 'react-router-dom'
 import RoutingPath from '../routes/RoutingPath'
+import { UserContext } from '../shared/provider/UserProvider'
 
 export const LogInWiev = () => {
   const history = useHistory()
-  const [loginCredentials, setLoginCredentials] = useState<loginCredentials>({username: '', password: ''})
+  const [loginCredentials, setLoginCredentials] = useState<i_loginCredentials>({username: '', password: ''})
+  const [authUser, setAuthUser] = useContext(UserContext)
+
 
   const signIn = () => {
-    history.push(RoutingPath.homeView)
-    localStorage.setItem('user', loginCredentials.username)
+    localStorage.setItem('user', loginCredentials.username) /* användarnamnet sparas inne i webläsaren */
+    setAuthUser(loginCredentials) /* alla värden i logincredentials sparas i ett globalt värde */
+    history.push(RoutingPath.homeView) /* vi flyttas tillbaka till home-view */
   }
 
   return (
