@@ -2,3 +2,8 @@
   width: 50px;
   border-radius: 50%;
 }
+
+.profileWrapper:hover .profileDropDown {
+  display: block;
+} 
+

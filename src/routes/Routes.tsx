@@ -5,9 +5,18 @@ import { CategoriesView } from '../view/CategoriesView'
 import { LogInWiev } from '../view/LogInWiev'
 import { SignUpView } from '../view/SignUpView'
 import RoutingPath from './RoutingPath'
+import { UserContext } from '../shared/provider/UserProvider'
+import { useEffect, useContext } from 'react'
 
 export const Routes = (props: {children: React.ReactChild}) => {
+  const [authUser, setAuthUser] = useContext(UserContext)
   const { children } = props
+
+  useEffect(() => {
+    if (localStorage.getItem('user')) {
+      setAuthUser({ username: localStorage.getItem('user') })   
+    }
+  }, [])
 
   return (
     <BrowserRouter>
