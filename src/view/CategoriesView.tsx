@@ -3,5 +3,5 @@ export const CategoriesView = () => {
     <div>
       <h1>Kategorier</h1>
     </div>
-  )
-}
+  );
+};

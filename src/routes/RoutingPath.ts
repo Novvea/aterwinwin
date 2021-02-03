@@ -1,8 +1,8 @@
-const homeView = '/'
-const aboutView = '/about'
-const categoriesView = '/categories'
-const logInView = '/login'
-const signUpView = '/signup'
+const homeView = "/";
+const aboutView = "/about";
+const categoriesView = "/categories";
+const logInView = "/login";
+const signUpView = "/signup";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -10,5 +10,5 @@ export default {
   aboutView,
   categoriesView,
   logInView,
-  signUpView
-}
+  signUpView,
+};
