@@ -1,0 +1,20 @@
+.navigationWrapper {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+}
+
+.navigationWrapper button {
+  cursor: pointer;
+  border: none;
+  background: none; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1000;
+  margin: 6px;
+  color: rgb(14, 59, 34);
+  transition: 0.1s;
+}
+  
+.navigationWrapper button:hover {
+  font-size: 0.9rem;
+  transition: 0.2s;
+}

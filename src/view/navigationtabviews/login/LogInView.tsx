@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
-import { i_loginCredentials } from "../shared/interface/Interface";
+import { i_loginCredentials } from "../../../shared/interface/Interface";
 import { useHistory } from "react-router-dom";
-import RoutingPath from "../routes/RoutingPath";
-import { UserContext } from "../shared/provider/UserProvider";
+import RoutingPath from "../../../routes/RoutingPath";
+import { UserContext } from "../../../shared/provider/UserProvider";
 
 export const LogInWiev = () => {
   const history = useHistory();

@@ -5,6 +5,7 @@ import { useContext } from "react";
 import RoutingPath from "../../../routes/RoutingPath";
 import { UserContext } from "../../../shared/provider/UserProvider";
 import { Profile } from "../../profile/Profile";
+import { NavigationTabs } from '../navigationtabs/NavigationTabs'
 
 export const DesktopNavigation = () => {
   const history = useHistory();
@@ -20,25 +21,17 @@ export const DesktopNavigation = () => {
         className="logInButton"
         onClick={() => history.push(RoutingPath.logInView)}
       >
-        Logga in
+        LOGGA IN
       </button>
     ;
   };
 
   return (
     <div className="desktopNavigationWrapper">
-      <button onClick={() => history.push(RoutingPath.homeView)}>
-        <img className="navigationLogotype" src={LogoType} alt={"Logotype"} />
-      </button>
-      <button onClick={() => history.push(RoutingPath.categoriesView)}>
-        Kategorier
-      </button>
-      <button onClick={() => history.push(RoutingPath.aboutView)}>
-        Hur det fungerar
-      </button>
-      <button onClick={() => history.push(RoutingPath.signUpView)}>
-        Skapa konto
-      </button>
+      <img className="navigationLogotype" src={LogoType} alt={"Logotype"} />
+      <div className="navigationTabs">
+        < NavigationTabs />
+      </div>
       {displaySignInOrUsername()}
     </div>
   );
