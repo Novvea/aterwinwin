@@ -11,34 +11,34 @@ export const DesktopNavigation = () => {
   const [authUser, setAuthUser] = useContext(UserContext);
 
   const displaySignInOrUsername = () => {
-    return authUser ? (
+    return authUser ? 
       <div className="profile">
         <Profile />
       </div>
-    ) : (
-      <span
+     : 
+      <button
         className="logInButton"
         onClick={() => history.push(RoutingPath.logInView)}
       >
         Logga in
-      </span>
-    );
+      </button>
+    ;
   };
 
   return (
     <div className="desktopNavigationWrapper">
-      <span onClick={() => history.push(RoutingPath.homeView)}>
+      <button onClick={() => history.push(RoutingPath.homeView)}>
         <img className="navigationLogotype" src={LogoType} alt={"Logotype"} />
-      </span>
-      <span onClick={() => history.push(RoutingPath.categoriesView)}>
+      </button>
+      <button onClick={() => history.push(RoutingPath.categoriesView)}>
         Kategorier
-      </span>
-      <span onClick={() => history.push(RoutingPath.aboutView)}>
+      </button>
+      <button onClick={() => history.push(RoutingPath.aboutView)}>
         Hur det fungerar
-      </span>
-      <span onClick={() => history.push(RoutingPath.signUpView)}>
+      </button>
+      <button onClick={() => history.push(RoutingPath.signUpView)}>
         Skapa konto
-      </span>
+      </button>
       {displaySignInOrUsername()}
     </div>
   );

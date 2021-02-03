@@ -17,10 +17,10 @@ export const ProfileDropDown = () => {
 
   return (
     <div className="profileDropDown">
-      <span>Alternativ 1</span>
-      <span>Alternativ 2</span>
-      <span>Alternativ 3</span>
-      <span onClick={() => logOut()}>Logga ut</span>
+      <button> Alternativ 1</button>
+      <button>Alternativ 2</button>
+      <button>Alternativ 3</button>
+      <button onClick={() => logOut()}>Logga ut</button>
     </div>
   );
 };

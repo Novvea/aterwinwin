@@ -5,7 +5,7 @@
 
 }
 
-.profileDropDown span {
+.profileDropDown button {
   display: block;
   cursor: pointer;
   padding: 10px;
