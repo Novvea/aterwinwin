@@ -5,13 +5,13 @@ const getWindowDimensions = () => {
   return { width, height }
 }
 
-export const useWindowDimensions = () => {getWindowDimensions())
-  const [ windowDimensions, setWindowDimensions ] = useState()
-  const handleResize = () => { setWindowDimensions(getWindowDimensions())}
+export const useWindowDimensions = () => {
+  const [ windowDimensions, setWindowDimensions ] = useState(getWindowDimensions())
+  const handleResize = () => { setWindowDimensions(getWindowDimensions()) }
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  },[])
+  }, [])
   return windowDimensions
 }

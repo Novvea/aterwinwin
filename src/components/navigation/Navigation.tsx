@@ -1,6 +1,20 @@
 import "./Navigation.css";
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+import { DesktopNavigation } from './desktopnavigation/DesktopNavigation'
+import { MobileNavigation } from './mobilenavigation/MobileNavigation'
 
 export const Navigation = () => {
-  return <div></div>;
+  const { height, width } = useWindowDimensions()
+
+  const displayNavigationDependingOnDevice = () => {
+    return (width <= 700)
+      ? <MobileNavigation/>
+      : <DesktopNavigation/>
+  }
+
+  return (
+    <div>
+      {displayNavigationDependingOnDevice() }
+    </div>
+  );
 };
