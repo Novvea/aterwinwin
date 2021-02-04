@@ -17,9 +17,8 @@ export const ProfileDropDown = () => {
 
   return (
     <div className="profileDropDown">
-      <button> Alternativ 1</button>
-      <button>Alternativ 2</button>
-      <button>Alternativ 3</button>
+      <button>Min profil</button>
+      <button>Inställningar</button>
       <button onClick={() => logOut()}>Logga ut</button>
     </div>
   );

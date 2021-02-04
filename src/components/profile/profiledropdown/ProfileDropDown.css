@@ -9,6 +9,10 @@
   display: block;
   cursor: pointer;
   padding: 10px;
-  color: white;
+  color: rgb(177, 218, 187);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  background: none;
+  border: none;
 }
 

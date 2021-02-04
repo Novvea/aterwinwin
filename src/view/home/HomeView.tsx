@@ -14,7 +14,7 @@ export const HomeView = () => {
 
   return (
     <div>
-{/*       <img className='logoType' src={LogoType} alt={'Logotype'}/>
- */}    </div>
+      <h1>Varmt välkomna till hemvyn!</h1>
+    </div>
   );
 };

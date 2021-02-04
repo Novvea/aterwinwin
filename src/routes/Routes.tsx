@@ -1,9 +1,9 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { AboutView } from "../view/navigationtabviews/about/AboutView";
-import { HomeView } from "../view/navigationtabviews/home/HomeView";
-import { CategoriesView } from "../view/navigationtabviews/categories/CategoriesView";
-import { LogInWiev } from "../view/navigationtabviews/login/LogInView";
-import { SignUpView } from "../view/navigationtabviews/signup/SignUpView";
+import { AboutView } from "../view/about/AboutView";
+import { HomeView } from "../view/home/HomeView";
+import { CategoriesView } from "../view/categories/CategoriesView";
+import { LogInWiev } from "../view/login/LogInView";
+import { SignUpView } from "../view/signup/SignUpView";
 import RoutingPath from "./RoutingPath";
 import { UserContext } from "../shared/provider/UserProvider";
 import { useEffect, useContext } from "react";

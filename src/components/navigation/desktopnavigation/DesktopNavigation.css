@@ -1,15 +1,41 @@
-/* .desktopNavigationWrapper {
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  background: #b5d5b1;
-} */
+ .desktopNavigationTabWrapper, .profile {
+/*   display: grid;
+  grid-template-columns: repeat(20, 1fr);*/
+  position: absolute;
+  right: 10px;
+  top: 0;
+} 
 
-.navigationLogotype {
-  width:100px;
-  grid-column: 3/4;
+.desktopNavigationTabWrapper button, .profile {
+  cursor: pointer;
+  border: none;
+  background: none; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1000;
+  font-size: 19px;
+  margin-top: 6px;
+  color: rgb(14, 59, 34);
 }
 
-.logInButton,
+.desktopNavigationTabWrapper button:hover {
+  color: rgb(0, 10, 5);
+}
+
+.desktopNavigationTabWrapper span {
+  border: none;
+  background: none; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin-top: 6px;
+  color: rgb(14, 59, 34);
+}
+
+/* .navigationLogotype {
+  width:100px;
+  grid-column: 3/4;
+} */
+
+/* .logInButton,
 .profile {
   grid-column: 15/16;
   cursor: pointer;
@@ -19,9 +45,10 @@
   font-weight: 1000;
   margin: 5px;
   color: rgb(14, 59, 34);
-}
+} */
 
-.navigationTabs {
+/* .navigationTabs {
   grid-column: 13/14;
   align-items: center;
-}
+} */
+

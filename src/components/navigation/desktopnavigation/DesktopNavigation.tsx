@@ -1,36 +1,37 @@
 import "./DesktopNavigation.css";
-/*import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
  import { useContext } from "react";
 import RoutingPath from "../../../routes/RoutingPath";
 import { UserContext } from "../../../shared/provider/UserProvider";
-import { Profile } from "../../profile/Profile"; */
-import { DesktopNavigationTabs } from './desktopnavigationtabs/DesktopNavigationTabs'
+import { Profile } from "../../profile/Profile";
+
 
 export const DesktopNavigation = () => {
-/*   const history = useHistory();
- *//*   const [authUser, setAuthUser] = useContext(UserContext); */
+  const history =useHistory()
+  const [authUser, setAuthUser] = useContext(UserContext);
 
-/*   const displaySignInOrUsername = () => {
+  const displayNavigationOrUsername = () => {
     return authUser ? 
-      <div className="profile">
+      <div className="profile" >
         <Profile />
       </div>
      : 
-      <button
-        className="logInButton"
-        onClick={() => history.push(RoutingPath.logInView)}
-      >
-        LOGGA IN
+     <div className="desktopNavigationTabWrapper"> 
+      <button onClick={() => history.push(RoutingPath.signUpView)}>
+        Gå med
       </button>
+        <span> eller </span>     
+      <button
+        onClick={() => history.push(RoutingPath.logInView)}>
+        logga in
+      </button>
+        <span> eller </span>
+      <button onClick={() => history.push(RoutingPath.aboutView)}>
+        få veta hur det fungerar.
+      </button>
+    </div>
     ;
-  }; */
+  };
 
-  return (
-    <div className="desktopNavigationWrapper">
-      <div className="navigationTabs">
-        < DesktopNavigationTabs />
-      </div>
-{/*       {displaySignInOrUsername()}
- */}    </div>
-  );
+  return displayNavigationOrUsername()
 };
