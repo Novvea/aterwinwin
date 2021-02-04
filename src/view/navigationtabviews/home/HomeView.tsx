@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
+import LogoType from '../../../shared/images/LogoType.png'
+import './HomeView.css'
 
 export const HomeView = () => {
   /*  const [authUser, setAuthUser] = useState() */
 
   useEffect(() => {
-    alert(
-      "HomeView first render"
-    ); /* det första som sker när komponenten laddas in */
+ ; /* det första som sker när komponenten laddas in */
     return () => {
       /* det sista som sker när komponeneten avlägsnas*/
     };
@@ -14,7 +14,7 @@ export const HomeView = () => {
 
   return (
     <div>
-      <h1>This is the HomeView!</h1>
+      <img className='logoType' src={LogoType} alt={'Logotype'}/>
     </div>
   );
 };
