@@ -1,0 +1,17 @@
+.navigationWrapper {
+  background: #b5d5b1;
+  height: 50px;
+}
+
+.appName { 
+  cursor: pointer;
+  border: none;
+  background: none; 
+  font-family: 'Hanalei', cursive;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 6px;
+  margin-left: 40px;
+  color: rgb(14, 59, 34);
+
+}

@@ -1,17 +1,16 @@
 import "./DesktopNavigation.css";
-import LogoType from "../../../shared/images/LogoType.png";
-import { useHistory } from "react-router-dom";
-import { useContext } from "react";
+/*import { useHistory } from "react-router-dom";
+ import { useContext } from "react";
 import RoutingPath from "../../../routes/RoutingPath";
 import { UserContext } from "../../../shared/provider/UserProvider";
-import { Profile } from "../../profile/Profile";
-import { NavigationTabs } from '../navigationtabs/NavigationTabs'
+import { Profile } from "../../profile/Profile"; */
+import { DesktopNavigationTabs } from './desktopnavigationtabs/DesktopNavigationTabs'
 
 export const DesktopNavigation = () => {
-  const history = useHistory();
-  const [authUser, setAuthUser] = useContext(UserContext);
+/*   const history = useHistory();
+ *//*   const [authUser, setAuthUser] = useContext(UserContext); */
 
-  const displaySignInOrUsername = () => {
+/*   const displaySignInOrUsername = () => {
     return authUser ? 
       <div className="profile">
         <Profile />
@@ -24,14 +23,14 @@ export const DesktopNavigation = () => {
         LOGGA IN
       </button>
     ;
-  };
+  }; */
 
   return (
     <div className="desktopNavigationWrapper">
       <div className="navigationTabs">
-        < NavigationTabs />
+        < DesktopNavigationTabs />
       </div>
-      {displaySignInOrUsername()}
-    </div>
+{/*       {displaySignInOrUsername()}
+ */}    </div>
   );
 };
