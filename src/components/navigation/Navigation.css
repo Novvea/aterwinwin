@@ -1,6 +1,8 @@
 .navigationWrapper {
   background: #b5d5b1;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .appName { 

@@ -10,7 +10,7 @@ export const Navigation = () => {
   const history = useHistory()
 
   const displayNavigationDependingOnDevice = () => {
-    return (width <= 750)
+    return (width <= 800)
       ? <MobileNavigation/>
       : <DesktopNavigation/>
   }

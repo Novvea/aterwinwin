@@ -1,12 +1,12 @@
  .desktopNavigationTabWrapper, .profile {
 /*   display: grid;
   grid-template-columns: repeat(20, 1fr);*/
-  position: absolute;
-  right: 10px;
-  top: 0;
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
 } 
 
-.desktopNavigationTabWrapper button, .profile {
+.desktopNavigationTabWrapper button, .desktopNavigationTabWrapper span, .profile {
   cursor: pointer;
   border: none;
   background: none; 
@@ -21,14 +21,10 @@
   color: rgb(0, 10, 5);
 }
 
-.desktopNavigationTabWrapper span {
-  border: none;
-  background: none; 
-  font-family: 'Roboto', sans-serif;
+ .desktopNavigationTabWrapper span {
   font-weight: 100;
-  margin-top: 6px;
-  color: rgb(14, 59, 34);
-}
+
+} 
 
 /* .navigationLogotype {
   width:100px;
