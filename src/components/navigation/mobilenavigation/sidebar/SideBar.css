@@ -5,13 +5,17 @@
   position: fixed;
   top: 60px;
   left: 0;
-  width: 50%;
+  width: 30%;
   max-width: 400px;
   z-index: 100;
   transform: translateX(-100%);
   transition: 0.3 ease-in-out;
   display: flex;
   flex-direction: column;
+}
+
+.sideBarWrapper.open {
+  transform: translateX(0%);
 }
 
 .sideBarWrapper  button {
@@ -21,6 +25,3 @@
   cursor: pointer;
 }
 
-.sideBarWrapper.open {
-  transform: translateX(0);
-}

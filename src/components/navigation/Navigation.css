@@ -1,8 +1,10 @@
 .navigationWrapper {
   background: #b5d5b1;
   height: 60px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+/*   display: flex;
+  justify-content: space-between; */
 }
 
 .appName { 

@@ -14,7 +14,17 @@ export const HomeView = () => {
 
   return (
     <div>
-      <h1>Varmt välkomna till hemvyn!</h1>
+      <h1>Varmt välkomna till hemvyn! Testar att göra en mondriantavla här nedan</h1>
+      <div className="mondrianOuterBox">
+        <div className="a">a</div>
+        <div className="b">b</div>
+        <div className="c">c</div>
+        <div className="d">d</div>
+        <div className="e">e</div>
+        <div className="f">f</div>
+        <div className="g">g</div>
+      </div>
+
     </div>
   );
 };

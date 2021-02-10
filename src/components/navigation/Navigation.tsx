@@ -6,8 +6,9 @@ import { useHistory } from 'react-router-dom'
 import RoutingPath from '../../routes/RoutingPath'
 
 export const Navigation = () => {
-  const { height, width } = useWindowDimensions()
+  const { width } = useWindowDimensions()
   const history = useHistory()
+
 
   const displayNavigationDependingOnDevice = () => {
     return (width <= 800)

@@ -1,10 +1,15 @@
- .desktopNavigationTabWrapper, .profile {
-/*   display: grid;
-  grid-template-columns: repeat(20, 1fr);*/
-  display: flex;
-  margin-right: 20px;
+ .desktopNavigationTabWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   align-items: center;
 } 
+
+.profile {
+/*   grid-column: 17/18;
+	grid-row: 1/1; */
+	align-self: center;
+	justify-self: flex-end;
+}
 
 .desktopNavigationTabWrapper button, .desktopNavigationTabWrapper span, .profile {
   cursor: pointer;
