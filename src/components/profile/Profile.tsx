@@ -13,7 +13,9 @@ export const Profile = () => {
         src={"https://thispersondoesnotexist.com/image"}
         alt={"Profilepicture"}
       />
-      {authUser.username}
+      <div className="navBarUserName">
+        {authUser.username}
+      </div>
       <ProfileDropDown />
     </div>
   );

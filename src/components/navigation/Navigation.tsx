@@ -2,13 +2,11 @@ import "./Navigation.css";
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import { DesktopNavigation } from './desktopnavigation/DesktopNavigation'
 import { MobileNavigation } from './mobilenavigation/MobileNavigation'
-import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import RoutingPath from '../../routes/RoutingPath'
 
 export const Navigation = () => {
   const { width } = useWindowDimensions()
-  const history = useHistory()
-
 
   const displayNavigationDependingOnDevice = () => {
     return (width <= 800)
@@ -18,7 +16,9 @@ export const Navigation = () => {
 
   return (
     <div className='navigationWrapper'>
-      <button className='appName' onClick={() => history.push(RoutingPath.homeView)}>ÅTERWINWIN</button>
+      <div className='appName'>
+      <Link to={RoutingPath.homeView}>ÅTERWINWIN</Link>
+      </div>
       {displayNavigationDependingOnDevice() }
     </div>
   );

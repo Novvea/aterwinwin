@@ -5,8 +5,6 @@
 } 
 
 .profile {
-/*   grid-column: 17/18;
-	grid-row: 1/1; */
 	align-self: center;
 	justify-self: flex-end;
 }

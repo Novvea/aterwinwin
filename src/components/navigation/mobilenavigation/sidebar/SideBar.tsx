@@ -13,9 +13,11 @@ export const SideBar = (props: {sideBarIsOpen: boolean, sideBarHandler: Function
 
   return (
     <div className={props.sideBarIsOpen ? 'sideBarWrapper open' : 'sideBarWrapper'}>
-        <button onClick={() => handleRedirectFromSideBar(RoutingPath.signUpView)}>Gå med,</button>
-        <button onClick={() => handleRedirectFromSideBar(RoutingPath.logInView)}>Logga in,</button>
-        <button onClick={() => handleRedirectFromSideBar(RoutingPath.aboutView)}>Eller få veta hur det fungerar?</button>
+        <button onClick={() => handleRedirectFromSideBar(RoutingPath.signUpView)}>Gå med</button>
+        <span>eller</span>
+        <button onClick={() => handleRedirectFromSideBar(RoutingPath.logInView)}>logga in</button>
+        <span>eller</span>
+        <button onClick={() => handleRedirectFromSideBar(RoutingPath.aboutView)}> få veta hur det fungerar.</button>
     </div>
   )
 }
