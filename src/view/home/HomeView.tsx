@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import LogoType from '../../../shared/images/LogoType.png'
 import './HomeView.css'
+import { ProductCards } from '../../components/productcards/ProductCards'
+import { Search } from '../../components/search/Search'
 
 export const HomeView = () => {
   /*  const [authUser, setAuthUser] = useState() */
@@ -13,12 +15,10 @@ export const HomeView = () => {
   }, []); /* när det värdet vi sätter in i input uppdateras så körs hela useEffect om */
 
   return (
-    <div>
-      <h1>Varmt välkomna till hemvyn!</h1>
+    <div className='homeViewWrapper'>
       <button>Kategorier</button>
-      <label>Sök:</label>
-      <input></input>
-      <div className='productCardWrapper'></div>
+      <Search/>
+      <ProductCards/>
     </div>
   );
 };
