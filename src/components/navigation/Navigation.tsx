@@ -17,7 +17,7 @@ export const Navigation = () => {
   return (
     <div className='navigationWrapper'>
       <div className='appName'>
-      <Link to={RoutingPath.homeView}>ÅTERWINWIN</Link>
+        <Link to={RoutingPath.homeView}>ÅTERWINWIN</Link>
       </div>
       {displayNavigationDependingOnDevice() }
     </div>

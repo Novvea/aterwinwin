@@ -1,5 +1,5 @@
 import "./DesktopNavigation.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
  import { useContext } from "react";
 import RoutingPath from "../../../routes/RoutingPath";
 import { UserContext } from "../../../shared/provider/UserProvider";
@@ -17,18 +17,17 @@ export const DesktopNavigation = () => {
       </div>
      : 
      <div className="desktopNavigationTabWrapper"> 
-      <button onClick={() => history.push(RoutingPath.signUpView)}>
+      <Link to={RoutingPath.signUpView}>
         Gå med
-      </button>
+      </Link>
         <span> eller </span>     
-      <button
-        onClick={() => history.push(RoutingPath.logInView)}>
+      <Link to={RoutingPath.logInView}>
         logga in
-      </button>
+      </Link>
         <span> eller </span>
-      <button onClick={() => history.push(RoutingPath.aboutView)}>
+      <Link to={RoutingPath.aboutView}>
         få veta hur det fungerar.
-      </button>
+      </Link>
     </div>
     ;
   };

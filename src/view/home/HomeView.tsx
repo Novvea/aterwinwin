@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 import LogoType from '../../../shared/images/LogoType.png'
 import './HomeView.css'
 import { ProductCards } from '../../components/productcards/ProductCards'
 import { Search } from '../../components/search/Search'
+import RoutingPath from '../../routes/RoutingPath'
 
 export const HomeView = () => {
   /*  const [authUser, setAuthUser] = useState() */
@@ -16,7 +18,7 @@ export const HomeView = () => {
 
   return (
     <div className='homeViewWrapper'>
-      <button>Kategorier</button>
+      <Link to={RoutingPath.categoriesView}>Kategorier</Link>
       <Search/>
       <ProductCards/>
     </div>

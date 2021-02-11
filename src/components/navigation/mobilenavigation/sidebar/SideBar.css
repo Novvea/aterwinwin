@@ -19,11 +19,9 @@
   transform: translateX(0);
 }
 
-.sideBarWrapper button,
+.sideBarWrapper a,
 .sideBarWrapper span {
-/*   padding: 4px; */
-  background:none;
-  border: none;
+  text-decoration: none;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-weight: 1000;
@@ -37,7 +35,7 @@
   font-weight: 100;
 
 } 
-.sideBarWrapper button:hover {
+.sideBarWrapper a:hover {
   color: rgb(0, 10, 5);
 }
 

@@ -9,18 +9,17 @@
 	justify-self: flex-end;
 }
 
-.desktopNavigationTabWrapper button, .desktopNavigationTabWrapper span, .profile {
+.desktopNavigationTabWrapper a, .desktopNavigationTabWrapper span, .profile {
   cursor: pointer;
-  border: none;
-  background: none; 
+  text-decoration: none; 
   font-family: 'Roboto', sans-serif;
   font-weight: 1000;
   font-size: 19px;
-  margin-top: 6px;
   color: rgb(14, 59, 34);
+  padding: 0 3px;
 }
 
-.desktopNavigationTabWrapper button:hover {
+.desktopNavigationTabWrapper a:hover {
   color: rgb(0, 10, 5);
 }
 

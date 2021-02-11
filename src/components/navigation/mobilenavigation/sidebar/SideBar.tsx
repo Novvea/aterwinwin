@@ -1,5 +1,5 @@
 import './SideBar.css'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import RoutingPath from '../../../../routes/RoutingPath'
 
 export const SideBar = (props: {sideBarIsOpen: boolean, sideBarHandler: Function}) => {
@@ -13,11 +13,11 @@ export const SideBar = (props: {sideBarIsOpen: boolean, sideBarHandler: Function
 
   return (
     <div className={props.sideBarIsOpen ? 'sideBarWrapper open' : 'sideBarWrapper'}>
-        <button onClick={() => handleRedirectFromSideBar(RoutingPath.signUpView)}>Gå med</button>
+        <Link to={RoutingPath.signUpView}>Gå med</Link>
         <span>eller</span>
-        <button onClick={() => handleRedirectFromSideBar(RoutingPath.logInView)}>logga in</button>
+        <Link to={RoutingPath.logInView}>logga in</Link>
         <span>eller</span>
-        <button onClick={() => handleRedirectFromSideBar(RoutingPath.aboutView)}> få veta hur det fungerar.</button>
+        <Link to={RoutingPath.aboutView}> få veta hur det fungerar.</Link>
     </div>
   )
 }
