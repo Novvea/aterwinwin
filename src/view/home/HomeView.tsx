@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-import LogoType from '../../../shared/images/LogoType.png'
 import './HomeView.css'
 import { ProductCards } from '../../components/productcards/ProductCards'
 import { Search } from '../../components/search/Search'
@@ -18,9 +17,15 @@ export const HomeView = () => {
 
   return (
     <div className='homeViewWrapper'>
-      <Link to={RoutingPath.categoriesView}>Kategorier</Link>
-      <Search/>
-      <ProductCards/>
+      <div className='homeViewCategoriesWrapper'>
+        <Link to={RoutingPath.categoriesView}>Kategorier</Link>
+      </div>
+      <div className='homeViewSearchWrapper'>
+        <Search/>
+      </div>
+      <div className='homeViewProductCardsWrapper'>
+        <ProductCards/>
+      </div>
     </div>
   );
 };

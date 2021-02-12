@@ -1,6 +1,23 @@
 .homeViewWrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
   justify-content: center;
-  align-items: flex-start;
+}
+
+.homeViewCategoriesWrapper {
+  display: grid;
+  grid-column: 2/3;
+  justify-content: center;
+}
+
+.homeViewSearchWrapper {
+  display: grid;
+  grid-column: 2/3;
+  justify-content: center;
+}
+
+.homeViewProductCardsWrapper {
+  display: grid;
+  grid-column: 2/3;
+  justify-content: center;
 }

@@ -9,44 +9,5 @@
 	justify-self: flex-end;
 }
 
-.desktopNavigationTabWrapper a, .desktopNavigationTabWrapper span, .profile {
-  cursor: pointer;
-  text-decoration: none; 
-  font-family: 'Roboto', sans-serif;
-  font-weight: 1000;
-  font-size: 19px;
-  color: rgb(14, 59, 34);
-  padding: 0 3px;
-}
 
-.desktopNavigationTabWrapper a:hover {
-  color: rgb(0, 10, 5);
-}
-
- .desktopNavigationTabWrapper span {
-  font-weight: 100;
-
-} 
-
-/* .navigationLogotype {
-  width:100px;
-  grid-column: 3/4;
-} */
-
-/* .logInButton,
-.profile {
-  grid-column: 15/16;
-  cursor: pointer;
-  border: none;
-  background: none; 
-  font-family: 'Roboto', sans-serif;
-  font-weight: 1000;
-  margin: 5px;
-  color: rgb(14, 59, 34);
-} */
-
-/* .navigationTabs {
-  grid-column: 13/14;
-  align-items: center;
-} */
 

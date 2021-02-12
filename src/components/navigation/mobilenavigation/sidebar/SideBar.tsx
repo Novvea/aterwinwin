@@ -1,23 +1,16 @@
 import './SideBar.css'
-import { useHistory, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import RoutingPath from '../../../../routes/RoutingPath'
 
 export const SideBar = (props: {sideBarIsOpen: boolean, sideBarHandler: Function}) => {
 
-  const history = useHistory()
-  
-  const handleRedirectFromSideBar = (selectedView: string) => {
-    history.push(selectedView)
-    props.sideBarHandler(false)
-  }
-
   return (
     <div className={props.sideBarIsOpen ? 'sideBarWrapper open' : 'sideBarWrapper'}>
-        <Link to={RoutingPath.signUpView}>Gå med</Link>
+        <Link to={RoutingPath.signUpView} onClick={() => props.sideBarHandler(false)}>Gå med</Link>
         <span>eller</span>
-        <Link to={RoutingPath.logInView}>logga in</Link>
+        <Link to={RoutingPath.logInView} onClick={() => props.sideBarHandler(false)}>logga in</Link>
         <span>eller</span>
-        <Link to={RoutingPath.aboutView}> få veta hur det fungerar.</Link>
+        <Link to={RoutingPath.aboutView} onClick={() => props.sideBarHandler(false)}> få veta hur det fungerar.</Link>
     </div>
   )
 }
