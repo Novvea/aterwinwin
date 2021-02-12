@@ -27,7 +27,13 @@
   text-decoration: none;
   font-family: 'Hanalei', cursive;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.8rem;
   color: rgb(14, 59, 34);
   display: inline-block;
+}
+
+@media (max-width: 550px) {
+  .appName a{
+    font-size: 2rem;
+  }
 }
