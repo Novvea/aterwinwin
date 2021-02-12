@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import { Link } from 'react-router-dom'
 import './HomeView.css'
 import { ProductCards } from '../../components/productcards/ProductCards'
 import { Search } from '../../components/search/Search'
 import RoutingPath from '../../routes/RoutingPath'
+import { UserContext } from '../../shared/provider/UserProvider'
 
 export const HomeView = () => {
-  /*  const [authUser, setAuthUser] = useState() */
+  const [authUser] = useContext(UserContext);
 
   useEffect(() => {
  ; /* det första som sker när komponenten laddas in */
@@ -17,6 +18,7 @@ export const HomeView = () => {
 
   return (
     <div className='homeViewWrapper'>
+      <h1>Välkommen till hemvyn {authUser.username}</h1>
       <div className='homeViewCategoriesWrapper'>
         <Link to={RoutingPath.categoriesView}>Kategorier</Link>
       </div>
