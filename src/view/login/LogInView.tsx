@@ -4,15 +4,17 @@ import { useHistory } from "react-router-dom";
 import RoutingPath from "../../routes/RoutingPath";
 import { UserContext } from "../../shared/provider/UserProvider";
 
-export const LogInWiev = () => {
+export const LogInView = () => {
   const history = useHistory();
   const [loginCredentials, setLoginCredentials] = useState<i_loginCredentials>({
     username: "",
     password: "",
+   isAuthenticated: false
   });
   const [authUser, setAuthUser] = useContext(UserContext);
 
   const signIn = () => {
+    setLoginCredentials({ ...loginCredentials, isAuthenticated: true })
     localStorage.setItem(
       "user",
       loginCredentials.username
