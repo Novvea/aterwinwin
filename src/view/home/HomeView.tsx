@@ -9,6 +9,10 @@ import { UserContext } from '../../shared/provider/UserProvider'
 export const HomeView = () => {
   const [authUser] = useContext(UserContext);
 
+  const displayUsernameIfAuthenticated = () => {
+    return authUser ? <h1>Välkommen till hemvyn {authUser.username}</h1> : <h1>Välkommen till hemvyn </h1>
+  }
+
   useEffect(() => {
  ; /* det första som sker när komponenten laddas in */
     return () => {
@@ -18,7 +22,7 @@ export const HomeView = () => {
 
   return (
     <div className='homeViewWrapper'>
-      <h1>Välkommen till hemvyn {authUser.username}</h1>
+      {displayUsernameIfAuthenticated()}
       <div className='homeViewCategoriesWrapper'>
         <Link to={RoutingPath.categoriesView}>Kategorier</Link>
       </div>
