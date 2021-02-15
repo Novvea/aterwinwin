@@ -3,6 +3,8 @@ const aboutView = "/about";
 const categoriesView = "/categories";
 const logInView = "/login";
 const signUpView = "/signup";
+
+//Authenticated views:
 const settingsView = "/settings"
 const myProfileView ="/myprofile"
 
