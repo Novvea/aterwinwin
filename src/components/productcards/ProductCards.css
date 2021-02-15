@@ -3,3 +3,8 @@
   height: 600px;
   width: 500px;
 }
+
+.decisionButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+}
