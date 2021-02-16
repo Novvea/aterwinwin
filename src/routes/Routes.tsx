@@ -11,15 +11,17 @@ import { UserContext } from "../shared/provider/UserProvider";
 import { useEffect, useContext } from "react";
 
 export const Routes = (props: { children: React.ReactChild }) => {
-  const [authUser, setAuthUser] = useContext(UserContext);
+  const [authUserContext, setAuthUserContext] = useContext(UserContext);
   const { children } = props;
 
+  console.log('authUserContext:', authUserContext)
+
   const changeRoute = (goToView: React.FC, blockView: React.FC) => {
-    return !authUser ? goToView : blockView
+    return !authUserContext ? goToView : blockView
   }
   useEffect(() => {
     if (localStorage.getItem("user")) {
-      setAuthUser({ username: localStorage.getItem("user") });
+      setAuthUserContext({ username: localStorage.getItem("user") });
     }
   }, []);
 

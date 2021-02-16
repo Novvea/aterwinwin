@@ -8,10 +8,10 @@ import { Profile } from "../../profile/Profile";
 
 export const DesktopNavigation = () => {
   const history =useHistory()
-  const [authUser, setAuthUser] = useContext(UserContext);
+  const [authUserContext, setAuthUserContext] = useContext(UserContext);
 
   const displayNavigationOrUsername = () => {
-    return authUser ? 
+    return authUserContext ? 
       <div className="profile" >
         <Profile />
       </div>

@@ -4,7 +4,7 @@ import { UserContext } from "../../shared/provider/UserProvider";
 import { ProfileDropDown } from "./profiledropdown/ProfileDropDown";
 
 export const Profile = () => {
-  const [authUser] = useContext(UserContext);
+  const [authUserContext] = useContext(UserContext);
 
   return (
     <div className="profileWrapper">
@@ -14,7 +14,7 @@ export const Profile = () => {
         alt={"Profilepicture"}
       />
       <div className="profileName">
-        {authUser.username}
+        {authUserContext.username}
       </div>
       <ProfileDropDown />
     </div>

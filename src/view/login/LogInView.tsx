@@ -11,7 +11,7 @@ export const LogInView = () => {
     password: "",
    isAuthenticated: false
   });
-  const [authUser, setAuthUser] = useContext(UserContext);
+  const [authUserContext, setAuthUserContext] = useContext(UserContext);
 
   const signIn = () => {
     setLoginCredentials({ ...loginCredentials, isAuthenticated: true })
@@ -19,11 +19,12 @@ export const LogInView = () => {
       "user",
       loginCredentials.username
     ); /* användarnamnet sparas inne i webläsaren */
-    setAuthUser(
+    setAuthUserContext(
       loginCredentials
     ); /* alla värden i logincredentials sparas i ett globalt värde */
     history.push(RoutingPath.homeView); /* vi flyttas tillbaka till home-view */
   };
+
 
   return (
     <div>
