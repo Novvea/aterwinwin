@@ -9,9 +9,9 @@ import { UserContext } from '../../shared/provider/UserProvider'
 export const HomeView = () => {
   const [authUserContext] = useContext(UserContext);
 
-  const displayUsernameIfAuthenticated = () => {
+/*   const displayUsernameIfAuthenticated = () => {
     return authUserContext ? <h1>Välkommen till hemvyn {authUserContext.username}</h1> : <h1>Välkommen till hemvyn </h1>
-  }
+  } */
 
   useEffect(() => {
  ; /* det första som sker när komponenten laddas in */
@@ -22,7 +22,7 @@ export const HomeView = () => {
 
   return (
     <div className='homeViewWrapper'>
-      {displayUsernameIfAuthenticated()}
+     {/*  {displayUsernameIfAuthenticated()} */}
       <div className='homeViewCategoriesWrapper'>
         <Link to={RoutingPath.categoriesView}>Kategorier</Link>
       </div>
@@ -30,7 +30,8 @@ export const HomeView = () => {
         <Search/>
       </div>
       <div className='homeViewProductCardsWrapper'>
-        <ProductCards/>
+        <ProductCards/> 
+        <Link to={RoutingPath.myProfileView}>Hitta mina gillade produkter här...</Link>
       </div>
     </div>
   );
