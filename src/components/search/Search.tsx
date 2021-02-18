@@ -5,8 +5,7 @@ export const Search = () => {
   return (
   <div className='mainSearchWrapper'>
     <label>
-      Sök:
-      <input type='text' name='search'></input>
+      <input type='text' name='search' placeholder="Sök"></input>
     </label>
   </div>
   )

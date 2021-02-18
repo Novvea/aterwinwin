@@ -1,11 +1,12 @@
 .navigationWrapper {
 /*   background: #b5d5b1;*/
-  background-color: #deebdd;
-  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+   background-color: #deebdd;
+  background-image: linear-gradient(315deg, #79cc83 0%, #485e50 56%);
   height: 60px;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+/*   border-bottom: 1px solid rgb(87, 124, 87); */
 /*   position: fixed;
   width: 100%; */
 }
@@ -30,8 +31,10 @@
   font-family: 'Hanalei', cursive;
   font-weight: 500;
   font-size: 2.8rem;
-  color: rgb(14, 59, 34);
-  display: inline-block;
+/*   color: rgb(14, 59, 34);
+ */color: rgb(14, 36, 24);
+
+ display: inline-block;
 }
 
 @media (max-width: 550px) {
